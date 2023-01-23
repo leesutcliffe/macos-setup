@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
+cp ~/.zshrc ~/.zshrc.backup
 cat <<EOF >> ~/.zshrc
+# ADDED BY MACOS-SETUP
 eval "$(pyenv init --path)"
 
 alias ll="ls -al"
@@ -13,7 +15,6 @@ alias twl="terraform workspace list"
 alias k=kubectl
 alias gpl="git pull -r"
 alias gp="git push"
-alias dsa="docker stop $(docker ps -q)"
 alias gh=git
 export d="--dry-run=client"
 export do="-o yaml $d"
