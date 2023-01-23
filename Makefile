@@ -20,7 +20,8 @@ install-other:
 .PHONY: shell-setup
 ## Install or update all the packages in the brewfile
 shell-setup:
-	"$(ROOT_DIR)/shell_setup/bin/zsh_setup"
+	chmod +x "$(ROOT_DIR)/shell_setup/zsh_setup"
+	"$(ROOT_DIR)/shell_setup/zsh_setup"
 
 .PHONY: setup
 ## Install and setup all a workstation

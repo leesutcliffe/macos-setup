@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-cat <<EOF >> ~/.to_del
+cat <<EOF >> ~/.zshrc
 eval "$(pyenv init --path)"
 
 alias ll="ls -al"
