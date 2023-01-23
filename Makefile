@@ -12,6 +12,11 @@ install-packages:
 	"$(ROOT_DIR)/brew/bin/install"
 	"$(ROOT_DIR)/brew/bin/bundle-install"
 
+.PHONY: install-other
+## Install or update all the packages in the brewfile
+install-other:
+	"$(ROOT_DIR)/omz/bin/install"
+
 .PHONY: setup
 ## Install and setup all a workstation
-setup: install-packages
+setup: install-packages install-other
