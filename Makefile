@@ -17,6 +17,11 @@ install-packages:
 install-other:
 	"$(ROOT_DIR)/omz/bin/install"
 
+.PHONY: shell-setup
+## Install or update all the packages in the brewfile
+shell-setup:
+	"$(ROOT_DIR)/shell_setup/bin/zsh_setup"
+
 .PHONY: setup
 ## Install and setup all a workstation
 setup: install-packages install-other

@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+cat <<EOF >> ~/.to_del
+eval "$(pyenv init --path)"
+
+alias ll="ls -al"
+alias t=terraform
+alias tp="terraform plan"
+alias ta="terraform apply"
+alias taaa="terraform apply --auto-approve"
+alias tws="terraform workspace select"
+alias twl="terraform workspace list"
+alias k=kubectl
+alias gpl="git pull -r"
+alias gp="git push"
+alias dsa="docker stop $(docker ps -q)"
+alias gh=git
+export d="--dry-run=client"
+export do="-o yaml $d"
+wttr() {
+  while true; do clear && curl wttr.in/BD18%204LB && echo "Refreshed at: $(date "+%H:%M")"; sleep 7200; done
+}
+
+source <(kubectl completion zsh)
+
+[[ /usr/local/bin/kubectl ]] && source <(kubectl completion zsh)
+EOF
