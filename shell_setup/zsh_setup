@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+IS_ZSH_SETUP=$(cat ~/.zshrc | grep "ADDED BY MACOS-SETUP" >> /dev/null ; echo $?)
+if [ $IS_ZSH_SETUP ]; then
+    echo "ZSH is already set up" && exit 0
+fi
+
 cp ~/.zshrc ~/.zshrc.backup
 cat <<EOF >> ~/.zshrc
 # ADDED BY MACOS-SETUP

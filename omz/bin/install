@@ -2,6 +2,6 @@
 
 set -euo pipefail
 
-if ! [ -x "$(command -v omz)" ]; then
+if ! [ -x "$(command omz -v)" ]; then
 	/usr/bin/ruby -e "$(sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)")"
 fi
